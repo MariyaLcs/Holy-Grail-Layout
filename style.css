@@ -25,26 +25,32 @@ main {
 
 article {
   background: lightgoldenrodyellow;
-  flex-basis: 60%;
-  flex-grow: 5;
+  flex: 4 0 60%;
 }
 
 nav {
   order: -1;
   background: lightgray;
-  flex-basis: 20%;
-  flex-grow: 1;
+  flex: 1 1 20%;
 }
 
 aside {
   background: lightskyblue;
-  flex-basis: 20%;
-  flex-grow: 1;
+  flex: 1 1 20%;
+}
+
+main > *,
+header,
+footer {
+  margin: 4px;
+  padding: 5px;
+  border-radius: 7px;
 }
 
 @media all and (max-width: 640px) {
   main {
     flex-direction: column;
+    flex-grow: 1;
   }
   nav {
     order: 0;
